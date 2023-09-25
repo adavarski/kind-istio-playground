@@ -545,7 +545,6 @@ kubectl label namespace default  istio-injection=enabled
 
 - Understand Gateway and VirtualService, etc
 
-
 The VirtualService instructs the Ingress Gateway how to route the requests that were allowed into the cluster.
 Note: When we apply this resource (and actually all Istio CRD resources) the Kubernetes API Server creates an event received by Istio’s Control Plane which then applies the new configuration to the envoys (istio proxies, sidecar proxies) of every pod. And the Ingress Gateway controller is another Envoy which is configured by the Control Plane, visually presented 
 
