@@ -123,6 +123,12 @@ The envoys are configurable using Kubernetes [Custom Resource Definitions](https
 
 A deeper dive into the internals of the Control Plane is out of the scope of this article and would replicate the [official documentation](https://istio.io/docs/concepts/what-is-istio/#mixer), a redundancy I would like to refrain from.
 
+
+# Istio Components Summary:
+
+<img src="pictures/Istio-Components.jpgg?raw=true" width="1000">
+
+
 # Pre:
 
 - Docker
