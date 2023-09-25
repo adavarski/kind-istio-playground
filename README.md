@@ -129,11 +129,11 @@ A deeper dive into the internals of the Control Plane is out of the scope of thi
 <img src="pictures/Istio-Components.jpg?raw=true" width="1000">
 
 
-# Pre:
+# Prerequisite:
 
-- Docker
-- Kind
-- kubectl
+- Docker installed
+- Kind installed
+- kubectl installed
 
 
 # Create kubernetes cluster with kind (over docker) and metallb
