@@ -1,8 +1,16 @@
-#Kind  Istio Playground
+# Kind Istio Playground
 
-Isto demo in a kind-cluster
+Isto playground in a kind-cluster
+
+Pre:
+
+- Docker
+- Kind
+- kubectl
+
 
 # Create kubernetes cluster with kind (over docker) and metallb
+```
 kind create cluster
 kubectl get pod -A
 
@@ -25,9 +33,6 @@ data:
       addresses:
       - ${LB_NET_IP_FIRST}-${LB_NET_IP_LAST}
 EOT
-
-
-
 ```
 
 ## Install istio and addons
