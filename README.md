@@ -23,7 +23,7 @@ In addition, here are some other documents you may wish to read:
 
 You'll find many other useful documents on our [Wiki](https://github.com/istio/istio/wiki).
 
-## Introduction
+# Introduction
 
 [Istio](https://istio.io/latest/docs/concepts/what-is-istio/) is an open platform for providing a uniform way to [integrate
 microservices](https://istio.io/latest/docs/examples/microservices-istio/), manage [traffic flow](https://istio.io/latest/docs/concepts/traffic-management/) across microservices, enforce policies
@@ -53,7 +53,7 @@ Istio is composed of these components:
 
 - **Operator** - The component provides user friendly options to operate the Istio service mesh.
 
-## Repositories
+# Repositories
 
 The Istio project is divided across a few GitHub repositories:
 
@@ -89,7 +89,7 @@ Envoy filters) that support authentication, authorization, and telemetry collect
 <img src="pictures/The-Control-Plane-CORRECT.png?raw=true" width="1000">
 
 
-### Pre:
+# Pre:
 
 - Docker
 - Kind
