@@ -115,8 +115,13 @@ Welcome to the cruise and let’s get introduced to the Control Plane.
 
 ## The Control Plane:
 
+Is composed of three components: The Pilot, the Mixer, and the Citadel that in combination configure Envoys to route traffic, enforce policies and collect telemetry data. Visually presented in the image below:
+
 <img src="pictures/The-Control-Plane-CORRECT.png?raw=true" width="1000">
 
+The envoys are configurable using Kubernetes [Custom Resource Definitions](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/) provided by Istio and specialized for this purpose. Which means that for you it’s just another Kubernetes Resource with a familiar syntax. The same way you defined a service and applied it using the command kubectl apply the same we will do with Istio resources. And the control plane will take over applying the configuration to the envoys.
+
+A deeper dive into the internals of the Control Plane is out of the scope of this article and would replicate the [official documentation](https://istio.io/docs/concepts/what-is-istio/#mixer), a redundancy I would like to refrain from.
 
 # Pre:
 
