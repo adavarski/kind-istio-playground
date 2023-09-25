@@ -369,7 +369,7 @@ virtualservice.networking.istio.io/bookinfo   ["bookinfo-gateway"]   ["*"]   30s
 $ curl -s http://istioigw/productpage | grep -o "<title>.*</title>"
 <title>Simple Bookstore App</title>
 
-# Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.18.255.200
+# Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.17.255.200
 $ getent hosts istioigw
 172.17.255.200  istioigw
 
