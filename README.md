@@ -12,7 +12,6 @@ In this README:
 
 - [Introduction](#introduction)
 - [Repositories](#repositories)
-- [Issue management](#issue-management)
 
 In addition, here are some other documents you may wish to read:
 
