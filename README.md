@@ -86,7 +86,17 @@ including Citadel (acting as Certificate Authority), citadel agent, etc.
 extensions to the [Envoy proxy](https://github.com/envoyproxy/envoy) (in the form of
 Envoy filters) that support authentication, authorization, and telemetry collection.
 
-The Control Plane:
+
+# Istio’s Architecture
+
+Istio needs to intercept all the network communication to and from every service and apply a set of rules. This is achieved and logically split into two planes: The Data Plane and The Control Plane.
+
+## The Data Plane
+In Kubernetes the network traffic between pods is managed using Services as shown:
+
+
+
+## The Control Plane:
 
 <img src="pictures/The-Control-Plane-CORRECT.png?raw=true" width="1000">
 
