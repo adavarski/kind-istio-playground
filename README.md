@@ -125,6 +125,8 @@ kubectl label namespace default  istio-injection=enabled
 
 - Understand Gateway and VirtualService, etc
 
+
+<img src="pictures/Configuring-Routing-for-the-Ingress-Gateway.png?raw=true" width="1000">
 ```
 #
 # 1 nginx-controller + N Ingress + M Services = 1 Gateway + N VirtualService + M Services
