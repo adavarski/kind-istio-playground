@@ -512,7 +512,7 @@ and the web-application should load in the laptop
 # Istio demo
 
 ## Generate traffic
-- In VM, leave shell open running:
+- leave shell open running:
 ```
 while :; do echo -n "$(date)  "; curl -sv http://istioigw/productpage  2>&1 | grep '< HTTP' ; sleep 0.5; done
 ```
