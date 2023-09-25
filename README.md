@@ -672,3 +672,5 @@ kind cluster delete
 Ref:
 - https://rinormaloku.com/summary/
 - https://medium.com/google-cloud/istio-routing-basics-14feab3c040e
+
+[Credits](https://github.com/zipizap/IstioDemo)
