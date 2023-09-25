@@ -543,3 +543,6 @@ virtualservice.networking.istio.io/reviews created
 kind cluster delete
 ```
 
+Ref:
+- https://rinormaloku.com/summary/
+- https://medium.com/google-cloud/istio-routing-basics-14feab3c040e
