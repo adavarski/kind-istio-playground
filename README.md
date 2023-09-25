@@ -20,7 +20,7 @@ In addition, here are some other documents you may wish to read:
 - [Project Conventions](https://github.com/istio/istio/wiki/Development-Conventions) - describes the conventions we use within the code base
 - [Creating Fast and Lean Code](https://github.com/istio/istio/wiki/Writing-Fast-and-Lean-Code) - performance-oriented advice and guidelines for the code base
 
-You'll find many other useful documents on our [Wiki](https://github.com/istio/istio/wiki).
+You'll find many other useful documents on [Wiki](https://github.com/istio/istio/wiki).
 
 # Introduction
 
