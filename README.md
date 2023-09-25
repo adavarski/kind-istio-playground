@@ -94,7 +94,25 @@ Istio needs to intercept all the network communication to and from every service
 ## The Data Plane
 In Kubernetes the network traffic between pods is managed using Services as shown:
 
+<img src="pictures/Network-traffic-in-Kubernetes.png?raw=true" width="1000">
 
+But to intercept all the network communication Istio injects an intelligent Envoy proxy as a sidecar in every pod. The injected proxies represent the data plane. Using those proxies Istio easily can achieve our requirements, for an example let’s check out the retrying and Circuit breaking functionalities.
+
+<img src="pictures/Envoys-in-action.gif?raw=true" width="1000">
+
+To summarize:
+
+Envoy sends a request to the first instance of service B and it fails.
+The Envoy Sidecar retries. (1)
+Returns a failed request to the calling proxy.
+Which opens the Circuit Breaker and calls the next Service on subsequent requests. (2)
+This means that you don’t have to use another Retry library, you don’t have to develop your own implementation of Circuit Breaking and Service Discovery in Programming Language X, Y or Z. All of those and more are provided out of the box by Istio and NO code changes are required.
+
+Great! Now, you want to join the voyage, but you still have some doubts, some open questions. Is this a One-Size-Fits-All Solution, which you are suspicious about, as it always ends up being One-Size-Fits None solution!
+
+You finally mutter the question: Is this configurable?
+
+Welcome to the cruise and let’s get introduced to the Control Plane.
 
 ## The Control Plane:
 
