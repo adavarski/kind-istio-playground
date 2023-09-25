@@ -86,6 +86,8 @@ including Citadel (acting as Certificate Authority), citadel agent, etc.
 extensions to the [Envoy proxy](https://github.com/envoyproxy/envoy) (in the form of
 Envoy filters) that support authentication, authorization, and telemetry collection.
 
+The Control Plane:
+
 <img src="pictures/The-Control-Plane-CORRECT.png?raw=true" width="1000">
 
 
