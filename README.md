@@ -126,7 +126,7 @@ A deeper dive into the internals of the Control Plane is out of the scope of thi
 
 # Istio Components Summary:
 
-<img src="pictures/Istio-Components.jpgg?raw=true" width="1000">
+<img src="pictures/Istio-Components.jpg?raw=true" width="1000">
 
 
 # Pre:
