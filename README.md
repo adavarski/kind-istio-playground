@@ -5,8 +5,8 @@ Isto playground in a kind-cluster
 Istio: An open platform to connect, manage, and secure microservices.
 
 - For in-depth information about how to use Istio, visit [istio.io](https://istio.io)
-- To ask questions and get assistance from our community, visit [discuss.istio.io](https://discuss.istio.io)
-- To learn how to participate in our overall community, visit [our community page](https://istio.io/about/community)
+- To ask questions and get assistance from community, visit [discuss.istio.io](https://discuss.istio.io)
+- To learn how to participate in overall community, visit [our community page](https://istio.io/about/community)
 
 In this README:
 
