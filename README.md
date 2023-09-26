@@ -52,7 +52,7 @@ Istio is composed of these components:
 
 - **Operator** - The component provides user friendly options to operate the Istio service mesh.
 
-# Repositories
+## Repositories
 
 The Istio project is divided across a few GitHub repositories:
 
