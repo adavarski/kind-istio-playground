@@ -1,4 +1,4 @@
-# Kind Istio Playground
+## Kind Istio Playground
 
 Isto playground in a kind-cluster
 
@@ -22,7 +22,7 @@ In addition, here are some other documents you may wish to read:
 
 You'll find many other useful documents on [Wiki](https://github.com/istio/istio/wiki).
 
-# Introduction
+## Introduction
 
 [Istio](https://istio.io/latest/docs/concepts/what-is-istio/) is an open platform for providing a uniform way to [integrate
 microservices](https://istio.io/latest/docs/examples/microservices-istio/), manage [traffic flow](https://istio.io/latest/docs/concepts/traffic-management/) across microservices, enforce policies
@@ -86,11 +86,11 @@ extensions to the [Envoy proxy](https://github.com/envoyproxy/envoy) (in the for
 Envoy filters) that support authentication, authorization, and telemetry collection.
 
 
-# Istio’s Architecture
+## Istio’s Architecture
 
 Istio needs to intercept all the network communication to and from every service and apply a set of rules. This is achieved and logically split into two planes: The Data Plane and The Control Plane.
 
-## The Data Plane
+### The Data Plane
 In Kubernetes the network traffic between pods is managed using Services as shown:
 
 <img src="pictures/Network-traffic-in-Kubernetes.png?raw=true" width="1000">
@@ -113,7 +113,7 @@ You finally mutter the question: Is this configurable?
 
 Welcome to the cruise and let’s get introduced to the Control Plane.
 
-## The Control Plane:
+### The Control Plane:
 
 Is composed of three components: The Pilot, the Mixer, and the Citadel that in combination configure Envoys to route traffic, enforce policies and collect telemetry data. Visually presented in the image below:
 
@@ -124,19 +124,19 @@ The envoys are configurable using Kubernetes [Custom Resource Definitions](https
 A deeper dive into the internals of the Control Plane is out of the scope of this article and would replicate the [official documentation](https://istio.io/docs/concepts/what-is-istio/#mixer), a redundancy I would like to refrain from.
 
 
-# Istio Components Summary:
+## Istio Components Summary:
 
 <img src="pictures/Istio-Components.jpg?raw=true" width="1000">
 
 
-# Prerequisite:
+## Prerequisite:
 
 - Docker installed
 - Kind installed
 - kubectl installed
 
 
-# Create kubernetes cluster with kind (over docker) and metallb
+## Create kubernetes cluster with kind (over docker) and metallb
 ```
 $ kind create cluster
 $ kubectl get pod -A
@@ -662,7 +662,7 @@ virtualservice.networking.istio.io/reviews created
 - Understand mTLS (intra-mesh, can be mandatory)
 
 
-# Istio Lab Teardown (destroy kind cluster)
+## Istio Lab Teardown (destroy kind cluster)
 
 
 ```
