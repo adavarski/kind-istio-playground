@@ -672,5 +672,6 @@ kind cluster delete
 Ref:
 - https://rinormaloku.com/summary/
 - https://medium.com/google-cloud/istio-routing-basics-14feab3c040e
+- mTLS: https://istio.io/latest/docs/tasks/security/authentication/authn-policy/
 
 [Credits](https://github.com/zipizap/IstioDemo)
