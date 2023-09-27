@@ -509,31 +509,31 @@ and the web-application should load in the laptop
 <img src="pictures/kind-istio-bookinfo-productpage.png?raw=true" width="1000">
 
 
-# Istio demo
+## Istio demo
 
-## Generate traffic
+### Generate traffic
 - leave shell open running:
 ```
 while :; do echo -n "$(date)  "; curl -sv http://istioigw/productpage  2>&1 | grep '< HTTP' ; sleep 0.5; done
 ```
 
-## Open Istio dashboards
+### Open Istio dashboards
 
-### Kiali
+#### Kiali
 - in Laptop leave a shell open running: `kubectl proxy`
 - In laptop, open chrome tab to http://localhost:8001/api/v1/namespaces/istio-system/services/http:kiali:20001/proxy/
   
 <img src="pictures/kind-istio-kiali-bookinfo.png?raw=true" width="1000">
 
 
-### Grafana
+#### Grafana
 - In laptop, leave a shell open running: `kubectl -n istio-system port-forward service/grafana 8002:3000`
 - In laptop, open chrome tab to http://localhost:8002/d/3--MLVZZk/istio-control-plane-dashboard?orgId=1&refresh=5s
 
 <img src="pictures/kind-istio-grafana.png?raw=true" width="1000">
 
 
-### Jaeger
+#### Jaeger
 - In laptop, open chrome tab to http://localhost:8001/api/v1/namespaces/istio-system/services/http:tracing:80/proxy/jaeger/search
 
 <img src="pictures/kind-istio-jaeger.png?raw=true" width="1000">
@@ -663,7 +663,6 @@ virtualservice.networking.istio.io/reviews created
 
 
 ## Istio Lab Teardown (destroy kind cluster)
-
 
 ```
 kind cluster delete
