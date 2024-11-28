@@ -138,6 +138,16 @@ A deeper dive into the internals of the Control Plane is out of the scope of thi
 
 ## Create kubernetes cluster with kind (over docker) and metallb
 ```
+$ cat /etc/docker/daemon.json 
+{
+  "default-address-pools": [
+    {"base": "172.17.0.0/16", "size": 24}
+  ]
+}
+
+$ docker network rm kind
+$ sudo service docker restart
+
 $ kind create cluster
 $ kubectl get pod -A
 
