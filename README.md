@@ -501,6 +501,22 @@ gateway.networking.istio.io/bookinfo-gateway   30s
 NAME                                          GATEWAYS               HOSTS   AGE
 virtualservice.networking.istio.io/bookinfo   ["bookinfo-gateway"]   ["*"]   30s
 
+$ kubectl get svc -n istio-system
+NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                                                                      AGE
+grafana                ClusterIP      10.96.176.80    <none>           3000/TCP                                                                     14m
+istio-egressgateway    ClusterIP      10.96.219.200   <none>           80/TCP,443/TCP                                                               15m
+istio-ingressgateway   LoadBalancer   10.96.72.82     172.17.255.200   15021:32689/TCP,80:31672/TCP,443:30562/TCP,31400:32531/TCP,15443:30130/TCP   15m
+istiod                 ClusterIP      10.96.10.68     <none>           15010/TCP,15012/TCP,443/TCP,15014/TCP                                        16m
+jaeger-collector       ClusterIP      10.96.91.40     <none>           14268/TCP,14250/TCP,9411/TCP,4317/TCP,4318/TCP                               14m
+kiali                  ClusterIP      10.96.116.220   <none>           20001/TCP,9090/TCP                                                           14m
+loki                   ClusterIP      10.96.40.113    <none>           3100/TCP,9095/TCP                                                            14m
+loki-headless          ClusterIP      None            <none>           3100/TCP                                                                     14m
+loki-memberlist        ClusterIP      None            <none>           7946/TCP                                                                     14m
+prometheus             ClusterIP      10.96.26.165    <none>           9090/TCP                                                                     14m
+tracing                ClusterIP      10.96.176.197   <none>           80/TCP,16685/TCP                                                             14m
+zipkin                 ClusterIP      10.96.36.20     <none>           9411/TCP                                                                     14m
+
+
 # Check: from outside the cluster (from VM), we can connect to the app http://...../productpage
 # via istio-ingressgateway > Gateway > VirtualService > Service > Deployment > Pod
 $ curl -s http://istioigw/productpage | grep -o "<title>.*</title>"
@@ -509,6 +525,8 @@ $ curl -s http://istioigw/productpage | grep -o "<title>.*</title>"
 # Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.17.255.200
 $ getent hosts istioigw
 172.17.255.200  istioigw
+
+
 
 ```
 
