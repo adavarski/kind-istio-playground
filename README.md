@@ -665,7 +665,7 @@ virtualservice.networking.istio.io/reviews created
 ## Istio Lab Teardown (destroy kind cluster)
 
 ```
-kind cluster delete
+kind delete cluster
 ```
 
 Ref:
