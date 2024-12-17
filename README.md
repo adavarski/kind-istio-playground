@@ -141,7 +141,7 @@ A deeper dive into the internals of the Control Plane is out of the scope of thi
 $ cat /etc/docker/daemon.json 
 {
   "default-address-pools": [
-    {"base": "172.17.0.0/16", "size": 16}
+    {"base": "172.17.0.0/16", "size": 24}
   ]
 }
 
