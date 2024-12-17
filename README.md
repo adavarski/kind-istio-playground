@@ -189,6 +189,40 @@ data:
 EOT
 ```
 
+Or via helm
+```
+  helm upgrade --install --wait --timeout 35m --atomic --namespace metallb-system --create-namespace \
+    --repo https://metallb.github.io/metallb metallb metallb
+
+$ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2)
+172.17
+
+$ LB_NET_IP_FIRST=${LB_NET_PREFIX}.255.200
+$ LB_NET_IP_LAST=${LB_NET_PREFIX}.255.250
+
+
+  kubectl apply -f - <<EOF
+apiVersion: metallb.io/v1beta1
+kind: IPAddressPool
+metadata:
+  name: first-pool
+  namespace: metallb-system
+spec:
+  addresses:
+  - ${LB_NET_IP_FIRST}-${LB_NET_IP_LAST}
+---
+apiVersion: metallb.io/v1beta1
+kind: L2Advertisement
+metadata:
+  name: layer2
+  namespace: metallb-system
+spec:
+  ipAddressPools:
+  - first-pool
+EOF
+}
+```
+
 ## Install istio and addons
 
 ```
