@@ -103,7 +103,7 @@ To summarize:
 
 Envoy sends a request to the first instance of service B and it fails.
 The Envoy Sidecar retries. (1)
-Returns a failed request to the calling proxy.
+Returns a failed requested to the calling proxy.
 Which opens the Circuit Breaker and calls the next Service on subsequent requests. (2)
 This means that you don’t have to use another Retry library, you don’t have to develop your own implementation of Circuit Breaking and Service Discovery in Programming Language X, Y or Z. All of those and more are provided out of the box by Istio and NO code changes are required.
 
@@ -168,7 +168,7 @@ REF: https://metallb.universe.tf/installation/ -> kubectl apply -f https://raw.g
 $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/namespace.yaml
 $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/metallb.yaml
 
-$ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2)
+$ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2,3)
 172.17.1
 
 $ LB_NET_IP_FIRST=${LB_NET_PREFIX}.255.200
@@ -195,7 +195,7 @@ Or via helm
     --repo https://metallb.github.io/metallb metallb metallb
 
 $ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2,3)
-172.17
+172.17.1
 
 $ LB_NET_IP_FIRST=${LB_NET_PREFIX}.200
 $ LB_NET_IP_LAST=${LB_NET_PREFIX}.250
