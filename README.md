@@ -169,7 +169,7 @@ $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/man
 $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/manifests/metallb.yaml
 
 $ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2)
-172.17
+172.17.1
 
 $ LB_NET_IP_FIRST=${LB_NET_PREFIX}.255.200
 $ LB_NET_IP_LAST=${LB_NET_PREFIX}.255.250
