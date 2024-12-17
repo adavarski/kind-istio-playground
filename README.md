@@ -220,7 +220,6 @@ spec:
   ipAddressPools:
   - first-pool
 EOF
-}
 ```
 
 ## Install istio and addons
