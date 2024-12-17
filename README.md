@@ -194,11 +194,11 @@ Or via helm
   helm upgrade --install --wait --timeout 35m --atomic --namespace metallb-system --create-namespace \
     --repo https://metallb.github.io/metallb metallb metallb
 
-$ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2)
+$ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2,3)
 172.17
 
-$ LB_NET_IP_FIRST=${LB_NET_PREFIX}.255.200
-$ LB_NET_IP_LAST=${LB_NET_PREFIX}.255.250
+$ LB_NET_IP_FIRST=${LB_NET_PREFIX}.200
+$ LB_NET_IP_LAST=${LB_NET_PREFIX}.250
 
 
   kubectl apply -f - <<EOF
@@ -226,7 +226,7 @@ EOF
 
 ```
 $ curl -L https://istio.io/downloadIstio | sh -
-$ cd istio-1.19.0
+$ cd istio-1.24.1
 $ export PATH=$PWD/bin:$PATH
 
 $ istioctl install --set profile=demo -y
@@ -253,7 +253,7 @@ $ kubectl apply -f samples/addons
 $ kubectl rollout status deployment/kiali -n istio-system
 $ ISTIOINGRESSGW_LB_IP=$(kubectl -n istio-system get svc/istio-ingressgateway -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
 $ echo "$ISTIOINGRESSGW_LB_IP istioigw" | sudo tee -a /etc/hosts
-172.17.255.200 istioigw
+172.17.1.200 istioigw
 
 ```
 
@@ -564,7 +564,7 @@ $ getent hosts istioigw
 
 ```
 
-And then in your laptop open chrome tab to the application webpage http://172.17.255.200/productpage
+And then in your laptop open chrome tab to the application webpage http://172.17.1.200/productpage
 and the web-application should load in the laptop
 
 
