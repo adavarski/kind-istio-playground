@@ -171,8 +171,8 @@ $ kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.12.1/man
 $ LB_NET_PREFIX=$(docker network inspect -f '{{range .IPAM.Config }}{{ .Gateway }}{{end}}' kind | cut -d '.' -f1,2,3)
 172.17.1
 
-$ LB_NET_IP_FIRST=${LB_NET_PREFIX}.255.200
-$ LB_NET_IP_LAST=${LB_NET_PREFIX}.255.250
+$ LB_NET_IP_FIRST=${LB_NET_PREFIX}.200
+$ LB_NET_IP_LAST=${LB_NET_PREFIX}.250
 $ kubectl apply -f - <<EOT
 apiVersion: v1
 kind: ConfigMap
