@@ -231,7 +231,7 @@ $ export PATH=$PWD/bin:$PATH
 
 $ istioctl install --set profile=demo -y
 ✔ Istio core installed                                                                                                                                                                                                                                                                                                        
-✔ Istiod installed                                                                                                                                                                                                                                                                                                            
+✔ Istiod installed                                                                                                                                                                                                                                                                                   I                         
 ✔ Egress gateways installed                                                                                                                                                                                                                                                                                                   
 ✔ Ingress gateways installed                                                                                                                                                                                                                                                                                                  
 ✔ Installation complete                                                                                                                                                                                                                                                                                                       Made this installation the default for injection and validation.
@@ -556,9 +556,9 @@ zipkin                 ClusterIP      10.96.36.20     <none>           9411/TCP 
 $ curl -s http://istioigw/productpage | grep -o "<title>.*</title>"
 <title>Simple Bookstore App</title>
 
-# Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.17.255.200
+# Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.17.1.200
 $ getent hosts istioigw
-172.17.255.200  istioigw
+172.17.1.200  istioigw
 
 
 
