@@ -567,7 +567,7 @@ $ getent hosts istioigw
 
 ```
 
-And then in your laptop open chrome tab to the application webpage http://172.17.1.200/productpage
+And then in your laptop open chrome tab to the application webpage http://172.17.2.200/productpage
 and the web-application should load in the laptop
 
 
