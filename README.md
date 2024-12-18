@@ -1,3 +1,11 @@
+## Requirements
+
+- docker
+- kubectl
+- kind cli
+- helm
+- istio
+
 ## Kind Istio Playground
 
 Isto playground in a kind-cluster
