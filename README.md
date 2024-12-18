@@ -542,7 +542,7 @@ $ kubectl get svc -n istio-system
 NAME                   TYPE           CLUSTER-IP      EXTERNAL-IP      PORT(S)                                                                      AGE
 grafana                ClusterIP      10.96.176.80    <none>           3000/TCP                                                                     14m
 istio-egressgateway    ClusterIP      10.96.219.200   <none>           80/TCP,443/TCP                                                               15m
-istio-ingressgateway   LoadBalancer   10.96.72.82     172.17.255.200   15021:32689/TCP,80:31672/TCP,443:30562/TCP,31400:32531/TCP,15443:30130/TCP   15m
+istio-ingressgateway   LoadBalancer   10.96.72.82     172.17.2.200     15021:32689/TCP,80:31672/TCP,443:30562/TCP,31400:32531/TCP,15443:30130/TCP   15m
 istiod                 ClusterIP      10.96.10.68     <none>           15010/TCP,15012/TCP,443/TCP,15014/TCP                                        16m
 jaeger-collector       ClusterIP      10.96.91.40     <none>           14268/TCP,14250/TCP,9411/TCP,4317/TCP,4318/TCP                               14m
 kiali                  ClusterIP      10.96.116.220   <none>           20001/TCP,9090/TCP                                                           14m
