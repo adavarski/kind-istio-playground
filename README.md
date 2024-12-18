@@ -561,7 +561,7 @@ $ curl -s http://istioigw/productpage | grep -o "<title>.*</title>"
 
 # Take note of the following ip: <istio-ingressgateway_ExternalIp>, should be 172.17.1.200
 $ getent hosts istioigw
-172.17.1.200  istioigw
+172.17.2.200  istioigw
 
 
 
