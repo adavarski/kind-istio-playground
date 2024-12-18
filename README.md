@@ -256,7 +256,7 @@ $ kubectl apply -f samples/addons
 $ kubectl rollout status deployment/kiali -n istio-system
 $ ISTIOINGRESSGW_LB_IP=$(kubectl -n istio-system get svc/istio-ingressgateway -o=jsonpath='{.status.loadBalancer.ingress[0].ip}')
 $ echo "$ISTIOINGRESSGW_LB_IP istioigw" | sudo tee -a /etc/hosts
-172.17.1.200 istioigw
+172.17.2.200 istioigw
 
 ```
 
